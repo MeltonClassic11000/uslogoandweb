@@ -9,8 +9,75 @@ $section-padding: clamp(60px, 7vw, 80px) 0;
         padding: $section-padding;
         .footer-wrapper{
             display: grid;
-            grid-template-columns: repeat(5,1fr);
+            grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
             gap: 16px;
+
+            .social-icons{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                flex-wrap: wrap;
+                .icon{
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .footer-menu{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                li{
+                    position: relative;
+                    padding-left: 24px;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 6px;
+                        width: 16px;
+                        height: 16px;
+                        background: url('./../img/icons/laptop.svg') center /16px 16px no-repeat;
+                    }
+                    a{
+                        font-weight: 500;
+                        transition: all .3s ease;
+                        color: $secondary-color;
+
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
         }
     }
+}
+
+// Media Query
+@media (max-width:1200px) {
+    // Footer
+.footer{
+    .footer-top{
+        .footer-wrapper{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+}
+
+@media (max-width:768px) {
+    // Footer
+.footer{
+    .footer-top{
+        .footer-wrapper{
+            grid-template-columns: 1fr;
+        }
+    }
+}
 }

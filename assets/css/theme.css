@@ -63,6 +63,10 @@
   font-style: normal;
   font-display: swap;
 }
+.bai-jumree {
+  font-family: "Bai Jumjuree", sans-serif;
+}
+
 .text-primary {
   color: #B1000A !important;
 }

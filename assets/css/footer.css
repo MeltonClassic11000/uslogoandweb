@@ -3,6 +3,58 @@
 }
 .footer .footer-top .footer-wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
   gap: 16px;
+}
+.footer .footer-top .footer-wrapper .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.footer .footer-top .footer-wrapper .social-icons .icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #B1000A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer-top .footer-wrapper .footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer .footer-top .footer-wrapper .footer-menu li {
+  position: relative;
+  padding-left: 24px;
+}
+.footer .footer-top .footer-wrapper .footer-menu li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background: url("./../img/icons/laptop.svg") center/16px 16px no-repeat;
+}
+.footer .footer-top .footer-wrapper .footer-menu li a {
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #2A2E4B;
+}
+.footer .footer-top .footer-wrapper .footer-menu li a:hover {
+  color: #B1000A;
+}
+
+@media (max-width: 1200px) {
+  .footer .footer-top .footer-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .footer .footer-top .footer-wrapper {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=footer.css.map */
