@@ -1,0 +1,152 @@
+.header {
+  position: relative;
+  z-index: 1000;
+}
+.header .header-top {
+  background-color: #2A2E4B;
+  padding: 10px 0;
+}
+.header .header-top .header-top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.header .header-top .header-top-wrapper .left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header .header-top .header-top-wrapper .left .contact-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header .header-top .header-top-wrapper .left .contact-wrapper a {
+  color: white;
+}
+.header .header-top .header-top-wrapper .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header .header-top .header-top-wrapper .social-icons .icon {
+  background-color: #B1000A;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+}
+.header .navbar .header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+.header .navbar .header-wrapper .navbar-toggler {
+  padding: 4px;
+  border-radius: 4px;
+  border: none;
+  background-color: #B1000A;
+}
+.header .navbar .header-wrapper .navbar-toggler:focus {
+  box-shadow: none;
+}
+.header .navbar .header-wrapper .navbar-toggler .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+.header .navbar .header-wrapper .navbar-collapse {
+  justify-content: center;
+}
+.header .navbar .header-wrapper .navbar-collapse .navbar-nav {
+  margin-right: 0 !important;
+  gap: 24px;
+}
+.header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .nav-link {
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+.header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #B1000A;
+}
+.header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+  background-color: #B1000A;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+.header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: #2A2E4B;
+}
+.header .navbar .header-wrapper .btn:hover {
+  background-color: #B1000A;
+  border-color: #B1000A;
+  color: white;
+}
+
+@media (max-width: 1400px) {
+  .header .navbar .header-wrapper .navbar-brand img {
+    width: 150px;
+    height: auto;
+  }
+  .header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item {
+    gap: 16px;
+  }
+  .header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .header .navbar .header-wrapper .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .header .navbar .header-wrapper .navbar-collapse .navbar-nav {
+    background-color: #B1000A;
+    gap: 0;
+  }
+  .header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .nav-link {
+    padding: 16px 20px;
+    color: white;
+  }
+  .header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .nav-link.active, .header .navbar .header-wrapper .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+    color: white !important;
+    background-color: #2A2E4B;
+  }
+}
+@media (max-width: 992px) {
+  .header .header-top .header-top-wrapper {
+    gap: 8px;
+    justify-content: center;
+  }
+  .header .header-top .header-top-wrapper .left {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .header .header-top .header-top-wrapper .social-icons .icon {
+    width: 32px;
+    height: 32px;
+  }
+  .header .header-top .header-top-wrapper .social-icons .icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,16 @@
+// Variables
+$primary-color: #B1000A;
+$secondary-color: #2A2E4B;
+$section-padding: clamp(60px, 7vw, 80px) 0;
+
+// Footer
+.footer{
+    .footer-top{
+        padding: $section-padding;
+        .footer-wrapper{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 16px;
+        }
+    }
+}

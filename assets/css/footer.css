@@ -1,0 +1,8 @@
+.footer .footer-top {
+  padding: clamp(60px, 7vw, 80px) 0;
+}
+.footer .footer-top .footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}/*# sourceMappingURL=footer.css.map */

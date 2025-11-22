@@ -1,0 +1,312 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./../font/poppins/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./../font/poppins/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./../font/poppins/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./../font/poppins/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bai Jumjuree";
+  src: url("./../font/bai-jumjuree/BaiJamjuree-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bai Jumjuree";
+  src: url("./../font/bai-jumjuree/BaiJamjuree-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bai Jumjuree";
+  src: url("./../font/bai-jumjuree/BaiJamjuree-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bai Jumjuree";
+  src: url("./../font/bai-jumjuree/BaiJamjuree-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.text-primary {
+  color: #B1000A !important;
+}
+
+.bg-primary {
+  background-color: #B1000A !important;
+}
+
+.text-secondary {
+  color: #2A2E4B !important;
+}
+
+.bg-secondary {
+  background-color: #2A2E4B !important;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 25px;
+  padding: 11px 22px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-6px);
+}
+.btn.btn-primary {
+  background-color: #B1000A;
+  color: white;
+  border-color: #B1000A;
+}
+.btn.btn-primary img {
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+  background-color: white;
+  border-color: white;
+  color: #B1000A;
+  transform: translateY(-6px);
+}
+.btn.btn-primary:hover img, .btn.btn-primary:focus img, .btn.btn-primary:active img {
+  filter: unset;
+}
+.btn.btn-primary.no-hover:hover, .btn.btn-primary.no-hover:focus, .btn.btn-primary.no-hover:active {
+  background-color: #B1000A;
+  border-color: #B1000A;
+  color: white;
+}
+.btn.btn-light {
+  background-color: white;
+  border-color: white;
+  color: #000000;
+}
+.btn.btn-light img {
+  filter: brightness(0) invert(0);
+  transition: all 0.3s ease;
+}
+.btn.btn-light:hover, .btn.btn-light:focus, .btn.btn-light:active {
+  transform: translateY(-6px);
+}
+.btn.btn-outline {
+  border-color: white;
+  color: white;
+}
+.btn.btn-outline:hover, .btn.btn-outline:focus, .btn.btn-outline:active {
+  background-color: #B1000A;
+  border-color: #B1000A;
+  transform: translateY(-6px);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: clamp(60px, 7vw, 80px) 0;
+}
+
+.list-with-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.list-with-icons li {
+  position: relative;
+  padding-left: 28px;
+  color: white;
+}
+.list-with-icons li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 12px;
+  background: url("./../img/icons/check-secondary.svg") center/contain no-repeat;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: "Bai Jumjuree";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h2,
+.h2 {
+  font-size: clamp(30px, 5vw, 50px);
+}
+
+h3,
+.h3 {
+  font-size: clamp(26px, 4vw, 40px);
+}
+
+.fs-20 {
+  font-size: clamp(18px, 2vw, 20px);
+}
+
+.fs-24 {
+  font-size: clamp(20px, 2.4vw, 24px);
+}
+
+.nav-tabs {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 36px !important;
+}
+.nav-tabs .nav-item .nav-link {
+  border: 2px solid #B1000A;
+  color: #B1000A;
+  background-color: transparent;
+  border-radius: 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.nav-tabs .nav-item .nav-link:hover, .nav-tabs .nav-item .nav-link.active {
+  background-color: #B1000A;
+  color: white;
+}
+
+.custom-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.custom-lightbox img.lb-img {
+  max-width: 800px;
+  width: 100%;
+  max-height: 80%;
+  border-radius: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* Custom LightBox Buttons */
+.custom-lightbox .lb-close,
+.custom-lightbox .lb-prev,
+.custom-lightbox .lb-next {
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: bold;
+}
+
+.custom-lightbox .lb-close {
+  top: 20px;
+  right: 30px;
+}
+
+.custom-lightbox .lb-prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.custom-lightbox .lb-next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px;
+  }
+  .custom-lightbox img.lb-img {
+    max-width: 95%;
+    max-height: 70%;
+  }
+  .custom-lightbox .lb-prev,
+  .custom-lightbox .lb-next {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=theme.css.map */

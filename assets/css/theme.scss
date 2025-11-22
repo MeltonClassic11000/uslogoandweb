@@ -1,0 +1,364 @@
+// Variables
+$primary-color: #B1000A;
+$secondary-color: #2A2E4B;
+$section-padding: clamp(60px, 7vw, 80px) 0;
+
+// UNiversal
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Fonts
+// Poppins
+@font-face {
+    font-family: 'Poppins';
+    src: url('./../font/poppins/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./../font/poppins/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./../font/poppins/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./../font/poppins/Poppins-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Bai jumjuree
+@font-face {
+    font-family: 'Bai Jumjuree';
+    src: url('./../font/bai-jumjuree/BaiJamjuree-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bai Jumjuree';
+    src: url('./../font/bai-jumjuree/BaiJamjuree-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bai Jumjuree';
+    src: url('./../font/bai-jumjuree/BaiJamjuree-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bai Jumjuree';
+    src: url('./../font/bai-jumjuree/BaiJamjuree-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Colors
+.text-primary {
+    color: $primary-color !important;
+}
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.text-secondary {
+    color: $secondary-color !important;
+}
+
+.bg-secondary {
+    background-color: $secondary-color !important;
+}
+
+// Buttons
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 25px;
+    padding: 11px 22px;
+    border-width: 1px;
+    border-style: solid;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all .3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+    }
+
+    &.btn-primary {
+        background-color: $primary-color;
+        color: white;
+        border-color: $primary-color;
+
+        img {
+            filter: brightness(0) invert(1);
+            transition: all .3s ease;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: white;
+            border-color: white;
+            color: $primary-color;
+            transform: translateY(-6px);
+
+            img {
+                filter: unset;
+            }
+        }
+
+        &.no-hover {
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+
+    &.btn-light {
+        background-color: white;
+        border-color: white;
+        color: #000000;
+
+        img {
+            filter: brightness(0) invert(0);
+            transition: all .3s ease;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            transform: translateY(-6px);
+        }
+    }
+
+    &.btn-outline {
+        border-color: white;
+        color: white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            transform: translateY(-6px);
+        }
+    }
+}
+
+// Style
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    padding: $section-padding;
+}
+
+.list-with-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    li {
+        position: relative;
+        padding-left: 28px;
+        color: white;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 16px;
+            height: 12px;
+            background: url('./../img/icons/check-secondary.svg') center/contain no-repeat;
+        }
+    }
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-family: 'Bai Jumjuree';
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2,
+.h2 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+h3,
+.h3 {
+    font-size: clamp(26px, 4vw, 40px);
+}
+
+.fs-20 {
+    font-size: clamp(18px, 2vw, 20px);
+}
+
+.fs-24 {
+    font-size: clamp(20px, 2.4vw, 24px);
+}
+
+// Tab
+.nav-tabs {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 36px !important;
+
+    .nav-item {
+        .nav-link {
+            border: 2px solid $primary-color;
+            color: $primary-color;
+            background-color: transparent;
+            border-radius: 0;
+            font-weight: 500;
+            transition: all .3s ease;
+
+            &:hover,
+            &.active {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+}
+
+// Custom LightBox
+.custom-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.custom-lightbox img.lb-img {
+    max-width: 800px;
+    width: 100%;
+    max-height: 80%;
+    border-radius: 10px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Custom LightBox Buttons */
+.custom-lightbox .lb-close,
+.custom-lightbox .lb-prev,
+.custom-lightbox .lb-next {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+.custom-lightbox .lb-close {
+    top: 20px;
+    right: 30px;
+}
+
+.custom-lightbox .lb-prev {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.custom-lightbox .lb-next {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+
+
+// Media Query
+@media (max-width:768px) {
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .custom-lightbox img.lb-img {
+        max-width: 95%;
+        max-height: 70%;
+    }
+
+    .custom-lightbox .lb-prev,
+    .custom-lightbox .lb-next {
+        font-size: 30px;
+    }
+}

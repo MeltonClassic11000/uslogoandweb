@@ -1,0 +1,654 @@
+// Variables
+$primary-color: #B1000A;
+$secondary-color: #2A2E4B;
+$section-padding: clamp(60px, 7vw, 100px) 0;
+
+// Hero Section
+.hero-sec {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #000000;
+        opacity: .6;
+        z-index: -1;
+    }
+
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2; // Behind content
+
+        .video-element {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // Fill entire container
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); // Dark overlay
+        z-index: -1; // Behind content but above video
+    }
+
+    .content-wrapper {
+        .hero-subtitle {
+            font-size: clamp(24px, 3vw, 30px);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .typewriter-wrapper {
+            #typewriter {
+                height: clamp(36px, 6vw, 60px);
+                font-size: clamp(36px, 6vw, 60px);
+                font-weight: 700;
+                color: $primary-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .form-card {
+        background-color: #FFFFFFED;
+        border-radius: 20px;
+        padding: 40px 30px;
+
+        .form-subtitle {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2a2a2a;
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: clamp(30px, 4.2vw, 42px);
+            font-weight: 700;
+            color: $primary-color;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .input-wrapper {
+                display: flex;
+                align-items: start;
+                gap: 8px;
+
+                select,
+                .input-control {
+                    border-radius: 4px;
+                    padding: 8px 10px;
+                    background-color: white;
+                    outline: none;
+                    width: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.25);
+                }
+
+                label {
+                    font-size: 14px;
+                    line-height: 26px;
+                }
+            }
+
+            .submit-btn {
+                padding: 10px 20px;
+                width: 100%;
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+// Brand Section
+.brand-sec {
+    padding: 32px 0;
+
+    .image-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+// About Section
+.about-sec {
+    background: center/cover no-repeat;
+}
+
+// Inner Brand Section
+.inner-brand-sec {
+    padding: 20px 0;
+}
+
+// Service Section
+.service-sec {
+    .service-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+}
+
+// Our Service Section
+.our-service-sec {
+    background: center /cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #000000D6;
+        z-index: -1;
+    }
+
+    .service-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .our-service-card {
+            background: center /cover no-repeat;
+            padding: clamp(24px, 4vw, 40px);
+        }
+    }
+}
+
+// Our Pricing
+.our-pricing {
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        .card-pricing {
+            border: 2px solid $primary-color;
+            border-radius: 0;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+
+            .card-title {
+                font-size: 32px;
+                font-weight: 600;
+                color: $secondary-color;
+                margin-bottom: 24px !important;
+            }
+
+            .main-title {
+                font-size: 32px;
+                font-weight: 600;
+                color: $primary-color !important;
+                display: block;
+                margin-bottom: 18px !important;
+            }
+
+            .scroll {
+                height: 200px;
+                overflow: auto;
+                overflow-x: hidden;
+                text-align: left;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    li {
+                        position: relative;
+                        padding-left: 26px;
+                        font-weight: 500;
+                        color: #000000;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 6px;
+                            width: 16px;
+                            height: 12px;
+                            background: url('./../img/icons/primary-check.svg') center /contain no-repeat;
+                        }
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $primary-color;
+                    border-radius: 10px;
+                }
+
+                ::-webkit-scrollbar-thumb:hover {
+                    background: $primary-color;
+                    opacity: 1;
+                }
+
+                & {
+                    scrollbar-width: thin;
+                    scrollbar-color: $primary-color #f1f1f1;
+                }
+            }
+        }
+    }
+}
+
+// Creative Section
+.creative-sec {
+    background: center /cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #000000;
+        opacity: .75;
+        z-index: -1;
+    }
+
+    .description {
+        padding-bottom: 24px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 179px;
+            height: 2px;
+            background-color: $primary-color;
+        }
+    }
+}
+
+// Portfolio Section
+.portfolio-sec {
+    background: center /cover no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #000000;
+        opacity: .3;
+        z-index: -1;
+    }
+
+    .nav-tabs {
+        .nav-item {
+            .nav-link {
+                border-color: white;
+                color: white;
+
+                &:hover,
+                &.active {
+                    background-color: white;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        .tab-inner-img {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+// Contact Section
+.contact-sec {
+    background: center /cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: #000000;
+        opacity: .85;
+        z-index: -1;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+
+        &>*:nth-child(n+5) {
+            grid-column: 1 / -1;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+
+            .input-control,
+            select {
+                background-color: white;
+                outline: none;
+                border: none;
+                border-radius: 6px;
+                padding: 12px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Faq Section
+.faq-sec {
+    background: center /cover no-repeat;
+
+    .accordion {
+        .accordion-item {
+            border: 1px solid white;
+            background-color: transparent;
+            border-radius: 0;
+            border-bottom: none;
+
+            &:last-child {
+                border-bottom: 1px solid white;
+            }
+
+            .accordion-header {
+                .faq-btn {
+                    position: relative;
+                    padding: 16px 20px;
+                    background-color: $primary-color;
+                    border-radius: 0;
+                    padding-right: 40px;
+                    color: white;
+                    font-weight: 500;
+                    font-size: 18px;
+
+                    &:focus,
+                    &.active,
+                    &.collapsed {
+                        box-shadow: none;
+                    }
+
+                    &::before {
+                        content: "+";
+                        position: absolute;
+                        right: 20px;
+                        font-size: 22px;
+                        transition: transform .3s ease;
+                    }
+
+                    &:not(.collapsed)::before {
+                        content: "–";
+                    }
+                }
+            }
+
+            .accordion-body {
+                background-color: transparent;
+                padding: 16px 20px;
+                padding-bottom: 30px;
+                color: white;
+                animation: fadeIn .35s ease-in-out;
+            }
+        }
+    }
+
+    .accordion-button::after {
+        display: none;
+        background-image: none;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+}
+
+// Testimonial Section
+.testimonial-sec {
+    background: center /cover no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: $secondary-color;
+        opacity: .9;
+        z-index: -1;
+    }
+
+    .testimonial-slider {
+        .custom-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            box-shadow: 0px 0px 4px 0px #00000015;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                display: none;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: url('./../img/icons/angle-right.svg') center /10px 16px no-repeat;
+            }
+        }
+
+        .slick-prev {
+            left: -8px;
+
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+
+        .slick-next {
+            right: -8px;
+        }
+
+        .slick-slide {
+            outline: none;
+        }
+    }
+
+    .testimonial-card {
+        padding: 18px;
+        border-radius: 12px;
+        background-color: white;
+        height: 100%;
+        margin: 0 8px;
+
+        .description {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            transition: all 0.3s ease;
+        }
+
+        .description.expanded {
+            -webkit-line-clamp: unset;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 14px;
+            color: gray;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+}
+
+// Area Section
+.area-sec {
+    .map-responsive {
+        position: relative;
+        width: 100%;
+        padding-bottom: 55%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+
+}
+
+// Form Section
+.form-sec {
+    background: center /cover no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: $secondary-color;
+        opacity: .9;
+        z-index: -1;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+
+        >*:nth-child(1),
+        >*:nth-child(2),
+        >*:nth-child(3),
+        >*:nth-child(4),
+        >*:nth-child(5),
+        >*:nth-child(6) {
+            grid-column: span 1;
+        }
+
+        >*:nth-child(n+7) {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+// Media Query
+@media (max-width:992px) {
+
+    // Service Section
+    .service-sec {
+        .service-wrapper {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    // Our Service Section
+    .our-service-sec {
+        .service-wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // Our Pricing
+    .our-pricing {
+        .cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+    // Our Pricing
+    .our-pricing {
+        .cards-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // Contact section
+    .contact-sec {
+        .form {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .service-sec {
+        .service-wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+}
