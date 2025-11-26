@@ -14,7 +14,7 @@ $primary-color:#B1000A;$secondary-color:#2A2E4B;$section-padding:clamp(60px,7vw,
 .service-sec{.service-wrapper{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}}
 .our-service-sec{background:center/cover no-repeat;background-attachment:fixed;position:relative;z-index:1;&::before{content:'';position:absolute;inset:0;background-color:#000000D6;z-index:-1;}
 .service-wrapper{display:grid;grid-template-columns:1fr 1fr;.our-service-card{background:center/cover no-repeat;padding:clamp(24px,4vw,40px);}}}
-.our-pricing{.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;.card-pricing{border:2px solid $primary-color;border-radius:0;box-shadow:0 0 10px rgba(0,0,0,.5);padding:20px;.card-title{font-size:32px;font-weight:600;color:$secondary-color;margin-bottom:24px!important;}
+.our-pricing{.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;.card-pricing{border:2px solid $primary-color;border-radius:0;box-shadow:0 0 10px rgba(0,0,0,.5);padding:20px;.card-title{font-size:32px;font-weight:600;color:$secondary-color;margin-bottom:24px!important;text-transform: capitalize !important;}
 .main-title{font-size:32px;font-weight:600;color:$primary-color!important;display:block;margin-bottom:18px!important;}
 .scroll{height:200px;overflow:auto;overflow-x:hidden;text-align:left;ul{display:flex;flex-direction:column;gap:6px;li{position:relative;padding-left:26px;font-weight:500;color:#000;&::before{content:'';position:absolute;left:0;top:6px;width:16px;height:12px;background:url('./../img/icons/primary-check.svg') center/contain no-repeat;}}}
 &::-webkit-scrollbar{width:10px;}

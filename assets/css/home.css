@@ -7,7 +7,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #000000;
+  background-color: #000;
   opacity: 0.6;
   z-index: -1;
 }
@@ -39,7 +39,7 @@
 .hero-sec .content-wrapper .hero-subtitle {
   font-size: clamp(24px, 3vw, 30px);
   font-weight: 700;
-  color: white;
+  color: #fff;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
@@ -79,11 +79,10 @@
   align-items: start;
   gap: 8px;
 }
-.hero-sec .form-card .form .input-wrapper select,
-.hero-sec .form-card .form .input-wrapper .input-control {
+.hero-sec .form-card .form .input-wrapper select, .hero-sec .form-card .form .input-wrapper .input-control {
   border-radius: 4px;
   padding: 8px 10px;
-  background-color: white;
+  background-color: #fff;
   outline: none;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.25);
@@ -152,7 +151,7 @@
 .our-pricing .cards-grid .card-pricing {
   border: 2px solid #B1000A;
   border-radius: 0;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
 .our-pricing .cards-grid .card-pricing .card-title {
@@ -160,6 +159,7 @@
   font-weight: 600;
   color: #2A2E4B;
   margin-bottom: 24px !important;
+  text-transform: capitalize !important;
 }
 .our-pricing .cards-grid .card-pricing .main-title {
   font-size: 32px;
@@ -183,7 +183,7 @@
   position: relative;
   padding-left: 26px;
   font-weight: 500;
-  color: #000000;
+  color: #000;
 }
 .our-pricing .cards-grid .card-pricing .scroll ul li::before {
   content: "";
@@ -223,7 +223,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #000000;
+  background-color: #000;
   opacity: 0.75;
   z-index: -1;
 }
@@ -251,16 +251,16 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #000000;
+  background-color: #000;
   opacity: 0.3;
   z-index: -1;
 }
 .portfolio-sec .nav-tabs .nav-item .nav-link {
-  border-color: white;
-  color: white;
+  border-color: #fff;
+  color: #fff;
 }
 .portfolio-sec .nav-tabs .nav-item .nav-link:hover, .portfolio-sec .nav-tabs .nav-item .nav-link.active {
-  background-color: white;
+  background-color: #fff;
   color: #B1000A;
 }
 .portfolio-sec .tab-content .tab-inner-img {
@@ -278,7 +278,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #000000;
+  background-color: #000;
   opacity: 0.85;
   z-index: -1;
 }
@@ -295,9 +295,8 @@
   align-items: start;
   gap: 10px;
 }
-.contact-sec .form .input-wrapper .input-control,
-.contact-sec .form .input-wrapper select {
-  background-color: white;
+.contact-sec .form .input-wrapper .input-control, .contact-sec .form .input-wrapper select {
+  background-color: #fff;
   outline: none;
   border: none;
   border-radius: 6px;
@@ -309,13 +308,13 @@
   background: center/cover no-repeat;
 }
 .faq-sec .accordion .accordion-item {
-  border: 1px solid white;
+  border: 1px solid #fff;
   background-color: transparent;
   border-radius: 0;
   border-bottom: none;
 }
 .faq-sec .accordion .accordion-item:last-child {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fff;
 }
 .faq-sec .accordion .accordion-item .accordion-header .faq-btn {
   position: relative;
@@ -323,7 +322,7 @@
   background-color: #B1000A;
   border-radius: 0;
   padding-right: 40px;
-  color: white;
+  color: #fff;
   font-weight: 500;
   font-size: 18px;
 }
@@ -342,9 +341,8 @@
 }
 .faq-sec .accordion .accordion-item .accordion-body {
   background-color: transparent;
-  padding: 16px 20px;
-  padding-bottom: 30px;
-  color: white;
+  padding: 16px 20px 30px;
+  color: #fff;
   animation: fadeIn 0.35s ease-in-out;
 }
 .faq-sec .accordion-button::after {
@@ -379,11 +377,11 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: white;
+  background: #fff;
   border: none;
   width: 36px;
   height: 36px;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.0823529412);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.0823529412);
   border-radius: 50%;
   color: #fff;
   font-size: 20px;
@@ -417,7 +415,7 @@
 .testimonial-sec .testimonial-card {
   padding: 18px;
   border-radius: 12px;
-  background-color: white;
+  background-color: #fff;
   height: 100%;
   margin: 0 8px;
 }
@@ -426,7 +424,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 .testimonial-sec .testimonial-card .description.expanded {
   -webkit-line-clamp: unset;
@@ -475,15 +473,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
-.form-sec .form > *:nth-child(1),
-.form-sec .form > *:nth-child(2),
-.form-sec .form > *:nth-child(3),
-.form-sec .form > *:nth-child(4),
-.form-sec .form > *:nth-child(5),
-.form-sec .form > *:nth-child(6) {
+.form-sec .form > *:nth-child(1), .form-sec .form > *:nth-child(2), .form-sec .form > *:nth-child(3), .form-sec .form > *:nth-child(4), .form-sec .form > *:nth-child(5), .form-sec .form > *:nth-child(6) {
   grid-column: span 1;
 }
-.form-sec .form > *:nth-child(n+7) {
+.form-sec .form * > :nth-child(n+7) {
   grid-column: 1/-1;
 }
 

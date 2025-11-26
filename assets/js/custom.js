@@ -95,8 +95,8 @@ $(document).ready(function () {
     dots: false,
     infinite: true,
     speed: 400,
-    prevArrow: '<button class="slick-prev custom-arrow"><span>&larr;</span></button>',
-    nextArrow: '<button class="slick-next custom-arrow"><span>&rarr;</span></button>',
+    prevArrow: '<button class="slick-prev custom-arrow" aria-label="Previous testimonial"><span>&larr;</span></button>',
+    nextArrow: '<button class="slick-next custom-arrow" aria-label="Next testimonial"><span>&rarr;</span></button>',
 
     responsive: [
       {
