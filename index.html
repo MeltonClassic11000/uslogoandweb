@@ -7,13 +7,20 @@
     <title>uslogoandweb</title>
     <meta name="description" content="Professional frontend developer creating modern, responsive and fast websites.">
     <link rel="canonical" href="https://example.com/">
+    <!-- PRELOAD CRITICAL CSS -->
+    <link rel="preload" href="./assets/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="./assets/css/header.css" as="style">
+    <link rel="preload" href="./assets/css/theme.css" as="style">
+    <!-- LOAD CSS -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/theme.css">
+    <!-- NON-CRITICAL: DO NOT PRELOAD -->
+    <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
 </head>
+
 
 
 <body>
